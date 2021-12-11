@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Star Team</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Star Team</span>
+    </div>
+    <div id="about">
+      <a href="#" onclick="slowScroll('#main')">Príležitosti</a>
+      <a href="#" onclick="slowScroll('#overview')">Výhody</a>
+      <a href="contacts.html" onclick="slowScroll('#contacts')">Kontakty</a>
+      <a href="#" onclick="slowScroll('#faq')">FAQ</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Star Team</h1>
+    <h3>Bezpečnostný systém vo vašej domácnosti!</h3>
+
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Naše služby vám pomôžu!</h2>
+      <span>Spoľahlivé zabezpečenie vášho domu, kancelárie, bytu.</span>
+    </div>
+    <div class="text">
+      <span>Správne prevedená inštalácia bezpečnostného alarmu je zárukou bezpečnosti kancelárie, domu či bytu. Moderné vybavenie, inštalované s ohľadom na súčasné požiadavky a predpisy, pomáha chrániť priestory pred nezvanými hosťami a zabezpečiť bezpečnosť majetku počas neprítomnosti majiteľov domu.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Výhody</h2>
+    <h4>S nami jednoduchšie!</h4>
+
+    <div class="img">
+      <img src="img/12.jpg" alt="">
+      <span>Cenovo dostupná bezpečnosť
+        Rôzne možnosti súprav a taríf</span>
+    </div>
+    <div class="img">
+      <img src="img/123.jpg" alt="">
+      <span>Pohodlné zabezpečenie
+        Jednoduché použitie a účinnosť</span>
+    </div>
+  </div>
+
+
+
+  <div id="faq">
+    <div>
+      <span class="title">Platba</span><br>
+      <span class="heading">Ako bude prebiehať platba?</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+ 
+    </div>
+    <div>
+      <span class="title">Právne otázky</span><br>
+      <span class="heading">Dokumenty a povolenia zariadenia</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+ 
+    </div>
+    <div>
+      <span class="title">Inštalácia</span><br>
+      <span class="heading">Termín, vybavenie</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+ 
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Star Team | Artur Vynokur | 2021</p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Star Team</title>
+  <link rel="stylesheet" href="css/contacts.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Star Team</span>
+    </div>
+    <div id="about">
+      <a href="index.html" onclick="slowScroll('#main')">Возможности</a>
+      <a href="index.html" onclick="slowScroll('#overview')">Преимущества</a>
+      <a href="index.html" onclick="slowScroll('#contacts')">Контакты</a>
+      <a href="index.html" onclick="slowScroll('#faq')">FAQ</a>
+    </div>
+  </header>
+
+
+  <div id="contacts">
+    <center><h5>Spätná väzba</h5></center>
+    <form id="form_input">
+      <label for="name">Meno a priezvisko <span>*</span></label><br>
+      <input type="text" placeholder="Zadajte svoje meno" name="name" id="name"><br>
+      <label for="email">Email <span>*</span></label><br>
+			<input type="email" placeholder="Zadajte svoj email" name="email" id="email"><br>
+			<label for="message">Správa <span>*</span></label><br>
+			<textarea placeholder="Zadajte svoju správu" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">poslať</div>
+    </form>
+  </div>
+
+  <div id="faq">
+    <div>
+      <span class="title">Platba</span><br>
+      <span class="heading">Ako bude prebiehať platba?</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+ 
+    </div>
+    <div>
+      <span class="title">Právne otázky</span><br>
+      <span class="heading">Dokumenty a povolenia zariadenia</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+ 
+    </div>
+    <div>
+      <span class="title">Inštalácia</span><br>
+      <span class="heading">Termín, vybavenie</span>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium beatae asperiores debitis perspiciatis perferendis nemo tempore distinctio officia commodi et non tempora laudantium culpa nostrum, quidem, quasi ratione itaque nam.</p>
+ 
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Star Team | Artur Vinokur | 2021</p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+  </script>
+</body>
+</html>
